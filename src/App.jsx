@@ -24,30 +24,12 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="user/:userid" element={<User />} />
-        <Route 
-        loader={githubInfoLoader}
-        path="github" 
-        element={<Github />} 
-        />
+        <Route loader={githubInfoLoader} path="github" element={<Github />} />
       </Route>
     )
   );
 
-  return (
-    <>
-      <RouterProvider router={router} />
-      {/* <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="*" element={<Navigate to="/" replace={true} />} />
-      </Routes> */}
-      {/* <Header /> */}
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
